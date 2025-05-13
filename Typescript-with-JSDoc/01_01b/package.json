@@ -1,0 +1,15 @@
+{
+  "name": "typescript-and-jsdoc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "ayman",
+  "license": "MIT",
+  "description": "A project that make us practice to work with JSDoc",
+  "dependencies": {
+    "typescript": "^5.8.3"
+  }
+}
