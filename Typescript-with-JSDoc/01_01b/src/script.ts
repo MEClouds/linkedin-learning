@@ -30,6 +30,13 @@
 
 /**
  * Represnts a countery with its name , countery code , and spoken languages
+ * 
+ * ## **`usage Example`**
+ * ```js
+ * const spain = new Country("Spain","SP")
+ * spain.addLanguage("Spanish")
+ * console.log(spain)
+ * ```
  * @class
  */
 class Country {

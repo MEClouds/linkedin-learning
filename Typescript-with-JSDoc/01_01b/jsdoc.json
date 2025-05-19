@@ -4,8 +4,11 @@
         "include":["src"],
         "exculde":["node_modules","dist"]
     },
-
-    "plugins":["jsdoc-babel"],
+    "markdown":{
+        "idInHeadings":true,
+        "hardwrap":false
+    },
+    "plugins":["jsdoc-babel","plugins/markdown"],
     "babel":{
         "extensions":"ts",
         "ignore":["**/*.(test|spec).ts"]
