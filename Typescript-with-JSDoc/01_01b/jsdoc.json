@@ -1,0 +1,26 @@
+{
+    "source":{
+        "includePattern":".+\\.(js|ts)$",
+        "include":["src"],
+        "exculde":["node_modules","dist"]
+    },
+
+    "plugins":["jsdoc-babel"],
+    "babel":{
+        "extensions":"ts",
+        "ignore":["**/*.(test|spec).ts"]
+    },
+    "opts":{
+        "destintion":"docs",
+        "recurse":true,
+        "template":"node_modules/clean-jsdoc-theme",
+        "theme_opts":{
+            "name":"typescript-and-jsdoc",
+            "version":"1.0.0",
+            "description":"A project that make us practice to work with JSDoc",
+            "author":"ayman",
+            "license":"MIT"
+        }
+
+    }
+}

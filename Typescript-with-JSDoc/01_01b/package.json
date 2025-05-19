@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "docs": "jsdoc -c jsdoc.json"
   },
   "keywords": [],
   "author": "ayman",
@@ -11,5 +11,12 @@
   "description": "A project that make us practice to work with JSDoc",
   "dependencies": {
     "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.27.1",
+    "@babel/preset-typescript": "^7.27.1",
+    "clean-jsdoc-theme": "^4.3.0",
+    "jsdoc": "^4.0.4",
+    "jsdoc-babel": "^0.5.0"
   }
 }
