@@ -28,66 +28,89 @@
 // greetInFrench("Ayman")
 
 
+// /**
+//  * Represnts a countery with its name , countery code , and spoken languages
+//  * 
+//  * ## **`usage Example`**
+//  * ```js
+//  * const spain = new Country("Spain","SP")
+//  * spain.addLanguage("Spanish")
+//  * console.log(spain)
+//  * ```
+//  * @class
+//  */
+
+// class Country {
+//     /**
+//      * The full name of the country
+//      * @readonly
+//      * @type {string}
+//      */ 
+//     readonly name : string;
+//      /**
+//      * The ISO code for country
+//      * @readonly
+//      * @type {string}
+//      */ 
+//     readonly code : string;
+//      /**
+//      * An array of languages spoken
+//      * @type {string[]}
+//      * @default []
+//      */ 
+//     languages:string[]=[]
+
+//     /**
+//      * Create a new Country instance
+//      * @param {string} name - The full name of the country
+//      * @param {string} code - the ISO country code (e.g. "SP" for Spain)
+//      * @example
+//      * const spain = new Country("Spain","SP")
+//      */
+//     constructor(name:string,code:string){
+//         this.name= name
+//         this.code=code
+
+//     }
+
+//     /**
+//      * Add a spoken language
+//      * @param {string} language - the name of the language to add
+//      * @returns {void}
+//      * @example
+//      * spain.addLanguage("Spanish")
+//      *  
+//      */
+
+//     addLanguage(language:string){
+//         this.languages.push(language)
+//     }
+// }
+
+// const spain = new Country("Spain","SP")
+// spain.addLanguage("Spanish")
+
+// console.log(spain)
+
+
+
 /**
- * Represnts a countery with its name , countery code , and spoken languages
+ * Reprresents a country with its name and languages 
+ * @template LanguagesType - The type for storing language data = can be a string or an array of strings
+ * @typedef {object} Country
+ * @property {string} name - The full name of the country 
+ * @property {LanguagesType} languages - languages spoken in the country. can be either string or an array of strings
  * 
- * ## **`usage Example`**
- * ```js
- * const spain = new Country("Spain","SP")
- * spain.addLanguage("Spanish")
- * console.log(spain)
- * ```
- * @class
  */
 
-class Country {
-    /**
-     * The full name of the country
-     * @readonly
-     * @type {string}
-     */ 
-    readonly name : string;
-     /**
-     * The ISO code for country
-     * @readonly
-     * @type {string}
-     */ 
-    readonly code : string;
-     /**
-     * An array of languages spoken
-     * @type {string[]}
-     * @default []
-     */ 
-    languages:string[]=[]
-
-    /**
-     * Create a new Country instance
-     * @param {string} name - The full name of the country
-     * @param {string} code - the ISO country code (e.g. "SP" for Spain)
-     * @example
-     * const spain = new Country("Spain","SP")
-     */
-    constructor(name:string,code:string){
-        this.name= name
-        this.code=code
-
-    }
-
-    /**
-     * Add a spoken language
-     * @param {string} language - the name of the language to add
-     * @returns {void}
-     * @example
-     * spain.addLanguage("Spanish")
-     *  
-     */
-
-    addLanguage(language:string){
-        this.languages.push(language)
-    }
+type Country<LanguagesType>={
+    name : string 
+    languages: LanguagesType;
 }
 
-const spain = new Country("Spain","SP")
-spain.addLanguage("Spanish")
-
-console.log(spain)
+const spainLanguages:Country<string[]>={
+name : "spain",
+languages:[
+    "Spainsh"
+,"Catalan","Basque"]
+}
