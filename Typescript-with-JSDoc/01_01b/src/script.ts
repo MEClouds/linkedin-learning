@@ -39,6 +39,7 @@
  * ```
  * @class
  */
+
 class Country {
     /**
      * The full name of the country
